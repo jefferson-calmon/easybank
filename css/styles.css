@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Public Sans', sans-serif;
+    
+}
+
+html{
+    overflow-x: hidden;
+}
+
+:root{
+    --blue-black: #2d314d;
+    --green-limão: #31d35c
+    --ciano-brilhante: #2bb7da;
+    --azul-acizentado: #9698a6;
+    --azul-acizentado-claro: #f3f4f6;
+    --cinza-light: #fafafa;
+    --branco: #ffffff;
+}
+
+html, body, .container{
+    background: #fafafa;
+    height: 100%;
+}
+
+.container, .container-element{
+    width: 80%;
+    margin: auto;
+    /* height: 100%; */
+    /* position: relative; */
+}
+
+.banner{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.banner header{
+    position: relative;
+    top: 0;
+    left: 0;
+    background: #fff;
+    /* padding: 25px 0; */
+    z-index: 1;
+    width: 100%;
+    height: 85.75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner header .container-element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-element nav{
+    height: 100%;
+}
+
+.container-element nav ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+
+.container-element nav ul li{
+    margin: 0 11px;
+    list-style: none;
+    position: relative;
+    height: 87.75px;
+    display: flex;
+    align-items: center;
+}
+
+.container-element nav ul li::before{
+    content: '';
+    position: absolute;
+    bottom: .5px;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #31d35c, #2bb7da);
+    border-radius: 5px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+
+.container-element nav ul li:hover::before{
+    visibility: visible;
+    opacity: 1;
+}
+
+.container-element nav ul li a{
+    text-decoration: none;
+    color: #9698a6;
+    font-weight: 400;
+    line-height: 87.75px;
+}
+
+.container-element nav ul li a:hover{
+    color: var(--blue-black);
+}
+
+.container-element a.call{
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #31d35c, #2bb7da);
+    border-radius: 65px;
+    position: relative;
+    height: 50px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container-element a.call:hover span{
+    background: #fafafa2d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#banner-image{
+    position: absolute;
+    top: -70px;
+    right: -250px;
+    width: 875px;
+    pointer-events: none;
+}
+
+.image{
+    -webkit-touch-callout: none;  /* iPhone OS, Safari */
+    -webkit-user-select: none;    /* Chrome, Safari 3 */
+    -khtml-user-select: none;     /* Safari 2 */
+    -moz-user-select: none;       /* Firefox */
+    -ms-user-select: none;        /* IE10+ */
+    user-select: none;            
+}
+
+#image-mobile{
+    position: absolute;
+    top: -10px;
+    right: -95px;
+    width: 600px;
+    pointer-events: none;
+}
+
+.sub-banner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.container-element .content-banner{
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container-element .content-banner h2{
+    font-size: 55px;
+    font-weight: 400;
+    color: var(--blue-black);
+    margin-bottom: 18px;
+}
+
+.container-element .content-banner p{
+    color: #9698a6;
+    margin: 12px 0;
+    font-size: 18px;
+}
+
+.container-element .content-banner a.call{
+    margin-top: 35px;
+    height: 47px;
+    width: 165px;
+}
+
+
+
+
+#why-choose-Easybank{
+    width: 100%;
+    min-height: 80vh;
+    background: #f3f4f6;
+}
+
+.elem-cont{
+    padding: 70px 0;
+}
+
+.text{
+    width: 50%;
+}
+
+#why-choose-Easybank h2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 37px;
+    color: var(--blue-black);
+    margin-bottom: 30px;
+}
+
+#why-choose-Easybank p{
+    color: var(--azul-acizentado);
+    font-size: 18px;
+}
+
+#why-choose-Easybank .grid-options{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.grid-options .box h3{
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#why-choose-Easybank .grid-options .box p{
+    font-size: 17px;
+}
+
+#articles{
+    min-height: 100vh;
+}
+
+#articles h2{
+    font-weight: 400;
+    font-size: 37px;
+}
+
+#articles .grid-articles{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+#articles .grid-articles .box-article{
+    background: #fff;
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+.text-article{
+    padding: 20px;
+}
+
+#articles .grid-articles .box-article img{
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+#articles .grid-articles .box-article h3{
+    font-size: 15px;
+    color: var(--azul-acizentado);
+    margin: 10px 0;
+    font-weight: 300;
+}
+
+#articles .grid-articles .box-article h2{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--blue-black);
+    margin-bottom: 10px;
+    transition: .2s;
+}
+
+#articles .grid-articles .box-article h2:hover{
+    color: #2EC597;
+    cursor: pointer;
+}
+
+#articles .grid-articles .box-article p{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--azul-acizentado);
+}
+
+
+footer{
+    background: #2d314d;
+}
+
+.elem{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.network{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.network div, .elem div.copy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.social div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.social div i{
+    margin: 20px 5px;
+    color: #fff;
+    font-size: 22px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.social div i:hover{
+    color: #2EC597;
+}
+
+div.network div.about, div.network .polity{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 80px;
+    text-align: left;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.network div.about a, .polity a{
+    list-style: none;
+    font-size: 18px;
+    transition: .3s;
+}
+
+.network div.about a:hover, .polity a:hover{
+    color: #2EC597;
+}
+
+.copy p{
+    color: #ddd;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+@media (max-width: 768px){
+
+    .banner{
+        overflow: hidden;
+        background: url('../images/bg-intro-desktop.svg') no-repeat;
+        background-size: 550px;
+        background-position: 35% -30%;
+    }
+
+    .container, .container-element, .sub-banner, .content-banner{
+        overflow: hidden;
+    }
+    
+    .banner header{
+        min-height: 65px;
+    }
+
+    .banner header .container-element{
+        padding: 0;
+    }
+
+    .container-element nav{
+        position: absolute;
+        width: 100%;
+        transform: translateX(-50%);
+        top: -100vh;
+        left: 50%;
+        transition: .3s;
+        height: 100vh;
+    }
+
+    .container-element nav.active{
+        top: 85px;
+        position: absolute;
+        z-index: 1000000;
+    }
+
+    .shadow-banner{
+        position: absolute;
+        background: linear-gradient(#262626bb, transparent);
+        height: 100vh;
+        width: 100%;
+        opacity: 0;
+        transition: .2s;
+        z-index: 0;
+    }
+    .shadow-banner.active{
+        opacity: 1;
+    }
+
+    .container-element nav ul{
+        flex-direction: column;
+        position: absolute;
+        left: 50%;
+        top: 30px;
+        background: #fff;
+        height: auto;
+        padding: 30px;
+        width: 87%;
+        transform: translateX(-50%);
+        z-index: 1000000;
+    }
+
+    .container-element nav ul li{
+        height: auto;
+    }
+
+    .container-element nav ul li::before{
+        content: none;
+    }
+
+    .container-element nav ul li a{
+        line-height: 50px;
+        font-weight: 600;
+        color: var(--blue-black);
+    }
+    
+
+    .menu-bars{
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 1000000;
+        position: relative;
+    }
+
+    .menu-bars span{
+        width: 100%;
+        height: 1.5px;
+        /* background: #000; */
+        transition: .4s;
+        border-bottom : 1px solid #000 ;
+    }
+
+    .menu-bars span.three{
+        transition: 0s;
+    }
+
+    .menu-bars.active span.one{
+        position: absolute;
+        top: 7px;
+        transform: rotate(45deg);
+    }
+
+    .menu-bars.active span.two{
+        position: absolute;
+        top: 7px;
+        transform: rotate(-45deg);
+    }
+
+    .menu-bars.active span.three{
+        position: absolute;
+        /* top: 0; */
+        height: 0;
+        opacity: 0;
+    }
+
+    #banner-image{
+        /* width: 500px; */
+        top: -80px;
+        right: -120px;
+        width: 550px;
+        display: none;
+    }
+
+    #image-mobile{
+        width: 340px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .image{
+        z-index: unset;
+    }
+
+    .container-element .content-banner{
+        position: relative;
+        margin-top: calc(100% + 180px);
+    }
+
+    .container-element .content-banner h2{
+        font-size: 37px;
+        margin-bottom: 18px;
+    }
+
+    
+    .container-element .content-banner p{
+        font-size: 18px;
+    }
+
+    
+    .container-element a.call{
+        display: none;
+    }
+
+    .text{
+        width: 100%;
+        text-align: center;
+    }
+
+    #why-choose-Easybank .grid-options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .grid-options .box{
+        margin-top: 10px;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    #articles h2{
+        text-align: center;
+        font-size: 35px;
+    }
+
+    #articles .grid-articles{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #articles .grid-articles .box-article{
+        text-align: center;
+    }
+
+    .elem{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .network{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .social div{
+        margin-top: 10px;
+    }
+
+    .copy p{
+        margin-top: 50px;
+    }
+}
